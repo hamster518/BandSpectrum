@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Spectrum Check</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/table-rwd.css' %}" rel="stylesheet">
+    <link href="{% static 'css/switchNav.css' %}" rel="stylesheet">
+    <link href="{% static 'css/navbar.css' %}" rel="stylesheet">
+    <title>Telecommunication Spectrum</title>
+</head>
+
+<body>
+    {% block navbar %} {% include "navbar.html" %} {% endblock %}
+    <div class="container">
+        <div class="row row-offcanvas row-offcanvas-right">
+            <div class="page-header">
+                <h1>Map</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                    {% block map %} {% include "map.html" %} {% endblock %}
+                </div>
+            </div>
+            <div class="page-header">
+                <h1>Result</h1>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    {% block content %} {% include "content.html" %} {% endblock %}
+                </div>
+            </div>
+            {% block modal %} {% include "modal.html" %} {% endblock %}
+        </div>
+        <!--/row-->
+        <hr> {% block footer %} {% include "footer.html" %} {% endblock %}
+    </div>
+    <!--/.container-->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/setBstModalMaxHeight.js' %}"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="{% static 'js/map.js' %}"></script>
+    <script src="{% static 'js/switchNav.js' %}"></script>
+</body>
+
+</html>
