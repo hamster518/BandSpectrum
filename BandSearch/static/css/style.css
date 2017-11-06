@@ -36,8 +36,12 @@ footer {
     vertical-align: middle;
 }
 .btnfilter{
-    z-index:20;!important
+    position:absolute;
+    z-index:3;
+    right: 15px;
+    top: 1px;
 }
 .map{
+    position:relative;
     z-index:1;
 }
